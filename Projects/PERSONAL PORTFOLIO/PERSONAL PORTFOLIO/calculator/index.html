@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .calculator {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #result {
+            width: 220px;
+            height: 60px;
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
+
+        .operator {
+            background-color: #ff9500;
+            color: #fff;
+        }
+
+        .operator:hover {
+            background-color: #ffa500;
+        }
+
+        .clear {
+            background-color: #ff3333;
+            color: #fff;
+        }
+
+        .clear:hover {
+            background-color: #ff4d4d;
+        }
+
+        .equal {
+            background-color: #4caf50;
+            color: #fff;
+            grid-column: span 2;
+        }
+
+        .equal:hover {
+            background-color: #6fbf73;
+        }
+
+        .made-by {
+            font-size: 18px;
+            color: #666;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <input type="text" id="result" disabled>
+            <div class="buttons">
+                <button class="clear" onclick="clearResult()">C</button>
+                <button class="operator" onclick="appendToResult('/')">&divide;</button>
+                <button class="operator" onclick="appendToResult('*')">&times;</button>
+                <button class="operator" onclick="appendToResult('-')">-</button>
+                <button onclick="appendToResult('7')">7</button>
+                <button onclick="appendToResult('8')">8</button>
+                <button onclick="appendToResult('9')">9</button>
+                <button class="operator" onclick="appendToResult('+')">+</button>
+                <button onclick="appendToResult('4')">4</button>
+                <button onclick="appendToResult('5')">5</button>
+                <button onclick="appendToResult('6')">6</button>
+                <button class="equal" onclick="calculate()">=</button>
+                <button onclick="appendToResult('1')">1</button>
+                <button onclick="appendToResult('2')">2</button>
+                <button onclick="appendToResult('3')">3</button>
+                <button onclick="appendToResult('0')">0</button>
+                <button onclick="appendToResult('.')">.</button>
+            </div>
+        </div>
+        <div class="made-by">MADE BY Subhadaya</div>
+    </div>
+
+    <script>
+        let resultInput = document.getElementById("result");
+
+        function appendToResult(value) {
+            resultInput.value += value;
+        }
+
+        function clearResult() {
+            resultInput.value = "";
+        }
+
+        function calculate() {
+            try {
+                resultInput.value = eval(resultInput.value);
+            } catch (e) {
+                resultInput.value = "Error";
+            }
+        }
+    </script>
+</body>
+</html>

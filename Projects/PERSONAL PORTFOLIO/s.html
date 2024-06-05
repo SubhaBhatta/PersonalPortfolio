@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: url(240_F_754714338_sSh3AkiFRp72lR4jKro1ePXJ5JhuM6ED.jpg)
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+img{
+    width: auto;
+    height: 25%;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+    background: green;
+    transition: 2s;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+body:before{
+    content: "";
+    position: absolute;
+    inset: 40% -60% 0 -60%;
+    opacity: 0.3;
+    pointer-events: none;
+}
+nav {
+    position: relative;
+    z-index: 1;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+nav.before .active element{
+    transform: rotateY(180deg);
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+#about, #projects, #contact {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+h2 {
+    color: #333;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0px;
+}
+#subhadaya123{
+    font-family: sans-serif ;
+    font-size: xx-large;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <p id="subhadaya123">Hello! My name is Subhadaya Bhatta, and I am a student with a passion for programming. I enjoy learning new programming languages, building projects, and solving problems through code.I work on the different languages such as HTML,CSS,Python,QBasics and so on.</p>
+    <img src="IMG_1028.jpg">
+</body>
+</html>
